@@ -1,0 +1,449 @@
+ompur@LAPTOP-DUVA4AC9 MINGW64 ~ (master)
+$ cd gitdemo
+bash: cd: gitdemo: No such file or directory
+
+ompur@LAPTOP-DUVA4AC9 MINGW64 ~ (master)
+$ downloads
+bash: downloads: command not found
+
+ompur@LAPTOP-DUVA4AC9 MINGW64 ~ (master)
+$ Downloads
+bash: Downloads: command not found
+
+ompur@LAPTOP-DUVA4AC9 MINGW64 ~ (master)
+$ cd Downloads
+
+ompur@LAPTOP-DUVA4AC9 MINGW64 ~/Downloads (master)
+$ cd gitdemo
+
+ompur@LAPTOP-DUVA4AC9 MINGW64 ~/Downloads/gitdemo (master)
+$ git init
+Reinitialized existing Git repository in C:/Users/ompur/Downloads/gitdemo/.git/
+
+ompur@LAPTOP-DUVA4AC9 MINGW64 ~/Downloads/gitdemo (master)
+$ ls -a
+./  ../  .git/  calculator.sh*
+
+ompur@LAPTOP-DUVA4AC9 MINGW64 ~/Downloads/gitdemo (master)
+$ ls -lrta
+total 881
+-rwxr-xr-x 1 ompur 197609 38 Sep 10 21:22 calculator.sh*
+drwxr-xr-x 1 ompur 197609  0 Sep 10 21:24 ./
+drwxr-xr-x 1 ompur 197609  0 Sep 11 19:06 ../
+drwxr-xr-x 1 ompur 197609  0 Sep 11 20:01 .git/
+
+ompur@LAPTOP-DUVA4AC9 MINGW64 ~/Downloads/gitdemo (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        calculator.sh
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+ompur@LAPTOP-DUVA4AC9 MINGW64 ~/Downloads/gitdemo (master)
+$
+
+ompur@LAPTOP-DUVA4AC9 MINGW64 ~/Downloads/gitdemo (master)
+$ ls
+calculator.sh*
+
+ompur@LAPTOP-DUVA4AC9 MINGW64 ~/Downloads/gitdemo (master)
+$ git add calculator.sh
+warning: in the working copy of 'calculator.sh', LF will be replaced by CRLF the next time Git touches it
+
+ompur@LAPTOP-DUVA4AC9 MINGW64 ~/Downloads/gitdemo (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   calculator.sh
+
+
+ompur@LAPTOP-DUVA4AC9 MINGW64 ~/Downloads/gitdemo (master)
+$ vim calculator.sh
+
+
+ompur@LAPTOP-DUVA4AC9 MINGW64 ~/Downloads/gitdemo (master)
+$ git diff
+warning: in the working copy of 'calculator.sh', LF will be replaced by CRLF the next time Git touches it
+diff --git a/calculator.sh b/calculator.sh
+index 8db4fa0..6e5965f 100644
+--- a/calculator.sh
++++ b/calculator.sh
+@@ -2,4 +2,4 @@
+
+
+ # Addition Function
+-
++x=1+2
+
+ompur@LAPTOP-DUVA4AC9 MINGW64 ~/Downloads/gitdemo (master)
+$ ls
+calculator.sh*
+
+ompur@LAPTOP-DUVA4AC9 MINGW64 ~/Downloads/gitdemo (master)
+$ ls -ltra
+total 885
+drwxr-xr-x 1 ompur 197609  0 Sep 11 19:06 ../
+drwxr-xr-x 1 ompur 197609  0 Sep 11 20:14 .git/
+-rwxr-xr-x 1 ompur 197609 43 Sep 11 20:15 calculator.sh*
+drwxr-xr-x 1 ompur 197609  0 Sep 11 20:15 ./
+
+ompur@LAPTOP-DUVA4AC9 MINGW64 ~/Downloads/gitdemo (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   calculator.sh
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   calculator.sh
+
+
+ompur@LAPTOP-DUVA4AC9 MINGW64 ~/Downloads/gitdemo (master)
+$ git add
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Turn this message off by running
+hint: "git config advice.addEmptyPathspec false"
+
+ompur@LAPTOP-DUVA4AC9 MINGW64 ~/Downloads/gitdemo (master)
+$ git commit -m "my first commit"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'ompur@LAPTOP-DUVA4AC9.(none)')
+
+ompur@LAPTOP-DUVA4AC9 MINGW64 ~/Downloads/gitdemo (master)
+$ git log
+fatal: your current branch 'master' does not have any commits yet
+
+ompur@LAPTOP-DUVA4AC9 MINGW64 ~/Downloads/gitdemo (master)
+$  git log
+fatal: your current branch 'master' does not have any commits yet
+
+ompur@LAPTOP-DUVA4AC9 MINGW64 ~/Downloads/gitdemo (master)
+$ git commit -m "my first commit"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'ompur@LAPTOP-DUVA4AC9.(none)')
+
+ompur@LAPTOP-DUVA4AC9 MINGW64 ~/Downloads/gitdemo (master)
+$ git config --global user.name "OPTIMUS"
+
+ompur@LAPTOP-DUVA4AC9 MINGW64 ~/Downloads/gitdemo (master)
+$ git commit -m "my first commit"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'ompur@LAPTOP-DUVA4AC9.(none)')
+
+ompur@LAPTOP-DUVA4AC9 MINGW64 ~/Downloads/gitdemo (master)
+$ git log
+fatal: your current branch 'master' does not have any commits yet
+
+ompur@LAPTOP-DUVA4AC9 MINGW64 ~/Downloads/gitdemo (master)
+$ git config --global user.name "OPTIMUS"
+
+ompur@LAPTOP-DUVA4AC9 MINGW64 ~/Downloads/gitdemo (master)
+$ omit --global
+bash: omit: command not found
+
+ompur@LAPTOP-DUVA4AC9 MINGW64 ~/Downloads/gitdemo (master)
+$ Omit --global
+bash: Omit: command not found
+
+ompur@LAPTOP-DUVA4AC9 MINGW64 ~/Downloads/gitdemo (master)
+$ omit --global^C
+
+ompur@LAPTOP-DUVA4AC9 MINGW64 ~/Downloads/gitdemo (master)
+$ Omit
+bash: Omit: command not found
+
+ompur@LAPTOP-DUVA4AC9 MINGW64 ~/Downloads/gitdemo (master)
+$ Omit --global
+bash: Omit: command not found
+
+ompur@LAPTOP-DUVA4AC9 MINGW64 ~/Downloads/gitdemo (master)
+$ git config --global user.name "OPTIMUS"
+
+ompur@LAPTOP-DUVA4AC9 MINGW64 ~/Downloads/gitdemo (master)
+$ git config --global user.email "optimus08x@gmail.com"
+
+ompur@LAPTOP-DUVA4AC9 MINGW64 ~/Downloads/gitdemo (master)
+$ git config --global user.name "optimus"
+
+ompur@LAPTOP-DUVA4AC9 MINGW64 ~/Downloads/gitdemo (master)
+$ git commit -m "my first commit"
+[master (root-commit) dd9d780] my first commit
+ 1 file changed, 5 insertions(+)
+ create mode 100644 calculator.sh
+
+ompur@LAPTOP-DUVA4AC9 MINGW64 ~/Downloads/gitdemo (master)
+$ git log
+commit dd9d7807938fe3a508658119f7f82dfd97fc3b84 (HEAD -> master)
+Author: optimus <optimus08x@gmail.com>
+Date:   Wed Sep 11 21:07:11 2024 +0530
+
+    my first commit
+
+ompur@LAPTOP-DUVA4AC9 MINGW64 ~/Downloads/gitdemo (master)
+$  git push
+fatal: No configured push destination.
+Either specify the URL from the command-line or configure a remote repository using
+
+    git remote add <name> <url>
+
+and then push using the remote name
+
+    git push <name>
+
+
+ompur@LAPTOP-DUVA4AC9 MINGW64 ~/Downloads/gitdemo (master)
+$ git remote add "github.com/opOPTIMUS/Firstcommit
+> git remote add "github.com/opOPTIMUS/Firstcommit"
+> gitremote add "github.com/opOPTIMUS/Firstcommit
+git push "github.com/opOPTIMUS/Firstcommit"
+usage: git remote add [<options>] <name> <url>
+
+    -f, --[no-]fetch      fetch the remote branches
+    --[no-]tags           import all tags and associated objects when fetching
+                          or do not fetch any tag at all (--no-tags)
+    -t, --[no-]track <branch>
+                          branch(es) to track
+    -m, --[no-]master <branch>
+                          master branch
+    --[no-]mirror[=(push|fetch)]
+                          set up remote as a mirror to push to or fetch from
+
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream github.com/opOPTIMUS/Firstcommit master
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+ompur@LAPTOP-DUVA4AC9 MINGW64 ~/Downloads/gitdemo (master)
+$ git remote add "github.com/opOPTIMUS/Firstcommit
+git remote add "github.com/opOPTIMUS/Firstcommit"
+git remote add "github.com/opOPTIMUS/Firstcommit
+usage: git remote add [<options>] <name> <url>
+
+    -f, --[no-]fetch      fetch the remote branches
+    --[no-]tags           import all tags and associated objects when fetching
+                          or do not fetch any tag at all (--no-tags)
+    -t, --[no-]track <branch>
+                          branch(es) to track
+    -m, --[no-]master <branch>
+                          master branch
+    --[no-]mirror[=(push|fetch)]
+                          set up remote as a mirror to push to or fetch from
+
+
+ompur@LAPTOP-DUVA4AC9 MINGW64 ~/Downloads/gitdemo (master)
+$ git push "github.com/opOPTIMUS/Firstcommit"
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream github.com/opOPTIMUS/Firstcommit master
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+ompur@LAPTOP-DUVA4AC9 MINGW64 ~/Downloads/gitdemo (master)
+$ git push --set-upstream github.com/opOPTIMUS/Firstcommit master
+fatal: 'github.com/opOPTIMUS/Firstcommit' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+ompur@LAPTOP-DUVA4AC9 MINGW64 ~/Downloads/gitdemo (master)
+$ git remote add "github.com/opOPTIMUS/Firstcommit"
+usage: git remote add [<options>] <name> <url>
+
+    -f, --[no-]fetch      fetch the remote branches
+    --[no-]tags           import all tags and associated objects when fetching
+                          or do not fetch any tag at all (--no-tags)
+    -t, --[no-]track <branch>
+                          branch(es) to track
+    -m, --[no-]master <branch>
+                          master branch
+    --[no-]mirror[=(push|fetch)]
+                          set up remote as a mirror to push to or fetch from
+
+
+ompur@LAPTOP-DUVA4AC9 MINGW64 ~/Downloads/gitdemo (master)
+$ git remote add "https://github.com/opOPTIMUS/Firstcommit"
+usage: git remote add [<options>] <name> <url>
+
+    -f, --[no-]fetch      fetch the remote branches
+    --[no-]tags           import all tags and associated objects when fetching
+                          or do not fetch any tag at all (--no-tags)
+    -t, --[no-]track <branch>
+                          branch(es) to track
+    -m, --[no-]master <branch>
+                          master branch
+    --[no-]mirror[=(push|fetch)]
+                          set up remote as a mirror to push to or fetch from
+
+
+ompur@LAPTOP-DUVA4AC9 MINGW64 ~/Downloads/gitdemo (master)
+$ git remote add "https://github.com/opOPTIMUS/Firstcommit"
+usage: git remote add [<options>] <name> <url>
+
+    -f, --[no-]fetch      fetch the remote branches
+    --[no-]tags           import all tags and associated objects when fetching
+                          or do not fetch any tag at all (--no-tags)
+    -t, --[no-]track <branch>
+                          branch(es) to track
+    -m, --[no-]master <branch>
+                          master branch
+    --[no-]mirror[=(push|fetch)]
+                          set up remote as a mirror to push to or fetch from
+
+
+ompur@LAPTOP-DUVA4AC9 MINGW64 ~/Downloads/gitdemo (master)
+$ git remote add "https://github.com/opOPTIMUS/Firstcommit"
+usage: git remote add [<options>] <name> <url>
+
+    -f, --[no-]fetch      fetch the remote branches
+    --[no-]tags           import all tags and associated objects when fetching
+                          or do not fetch any tag at all (--no-tags)
+    -t, --[no-]track <branch>
+                          branch(es) to track
+    -m, --[no-]master <branch>
+                          master branch
+    --[no-]mirror[=(push|fetch)]
+                          set up remote as a mirror to push to or fetch from
+
+
+ompur@LAPTOP-DUVA4AC9 MINGW64 ~/Downloads/gitdemo (master)
+$ git remote add <https://github.com/opOPTIMUS/Firstcommit>
+bash: syntax error near unexpected token `newline'
+
+ompur@LAPTOP-DUVA4AC9 MINGW64 ~/Downloads/gitdemo (master)
+$ git remote add "github.com/opOPTIMUS/Firstcommit"
+usage: git remote add [<options>] <name> <url>
+
+    -f, --[no-]fetch      fetch the remote branches
+    --[no-]tags           import all tags and associated objects when fetching
+                          or do not fetch any tag at all (--no-tags)
+    -t, --[no-]track <branch>
+                          branch(es) to track
+    -m, --[no-]master <branch>
+                          master branch
+    --[no-]mirror[=(push|fetch)]
+                          set up remote as a mirror to push to or fetch from
+
+
+ompur@LAPTOP-DUVA4AC9 MINGW64 ~/Downloads/gitdemo (master)
+$ git remote add "github.com/opOPTIMUS/Firstcommit" "https://github.com/opOPTIMUS/Firstcommit"
+
+ompur@LAPTOP-DUVA4AC9 MINGW64 ~/Downloads/gitdemo (master)
+$ git push "github.com/opOPTIMUS/Firstcommit" "https://github.com/opOPTIMUS/Firstcommit"
+fatal: invalid refspec 'https://github.com/opOPTIMUS/Firstcommit'
+
+ompur@LAPTOP-DUVA4AC9 MINGW64 ~/Downloads/gitdemo (master)
+$ git push "github.com/opOPTIMUS/Firstcommit"
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream github.com/opOPTIMUS/Firstcommit master
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+ompur@LAPTOP-DUVA4AC9 MINGW64 ~/Downloads/gitdemo (master)
+$ git push --set-upstream github.com/opOPTIMUS/Firstcommit master
+bash: $'\302\203\302\226\302\226git': command not found
+
+ompur@LAPTOP-DUVA4AC9 MINGW64 ~/Downloads/gitdemo (master)
+$ git push --set-upstream github.com/opOPTIMUS/Firstcommit master
+bash: $'\302\203\302\226\302\226git': command not found
+
+ompur@LAPTOP-DUVA4AC9 MINGW64 ~/Downloads/gitdemo (master)
+$ git add .
+warning: in the working copy of 'calculator.sh', LF will be replaced by CRLF the next time Git touches it
+
+ompur@LAPTOP-DUVA4AC9 MINGW64 ~/Downloads/gitdemo (master)
+$ git remote add origin hthttps://github.com/opOPTIMUS/Firstcommit.git
+
+ompur@LAPTOP-DUVA4AC9 MINGW64 ~/Downloads/gitdemo (master)
+$ git remote add origin https://github.com/opOPTIMUS/Firstcommit.git
+
+ompur@LAPTOP-DUVA4AC9 MINGW64 ~/Downloads/gitdemo (master)
+$ git push
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+ompur@LAPTOP-DUVA4AC9 MINGW64 ~/Downloads/gitdemo (master)
+$ git push origin master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 249 bytes | 249.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote:
+remote: Create a pull request for 'master' on GitHub by visiting:
+remote:      https://github.com/opOPTIMUS/Firstcommit/pull/new/master
+remote:
+To https://github.com/opOPTIMUS/Firstcommit.git
+ * [new branch]      master -> master
+
+ompur@LAPTOP-DUVA4AC9 MINGW64 ~/Downloads/gitdemo (master)
+$ git push --set-upstream origin master
+Everything up-to-date
+branch 'master' set up to track 'origin/master'.
+
+ompur@LAPTOP-DUVA4AC9 MINGW64 ~/Downloads/gitdemo (master)
+$
